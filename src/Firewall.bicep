@@ -2,7 +2,7 @@ param Location string = resourceGroup().location
 param FirewallPolicyName string
 param RuleCollectionGroups array = []
 
-module deployFirewallPolicy 'CARML/0.9.0/modules/Microsoft.Network/firewallPolicies/deploy.bicep' = {
+module deployFirewallPolicy 'br/public:avm/res/network/firewall-policy:0.2.0' = {
   name: 'deployFirewallPolicy'
   params: {
     name: FirewallPolicyName
